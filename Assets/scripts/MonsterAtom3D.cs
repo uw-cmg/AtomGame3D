@@ -15,13 +15,12 @@ public class MonsterAtom3D : Atom3D {
 
 		if(Application.loadedLevelName == "AnchorDemo"){
 			InitColorsByCharge();
-			GetComponent<MeshRenderer>().material.color = normalColor;
 			//if is not anchorable (aka. fixed monster)
-			/*
-			if(GetComponent<AnchorAtom>() == null){
-				GetComponent<SpriteRenderer>().color = normalColor;
+			
+			if(GetComponent<AnchorAtom3D>() == null){
+				GetComponent<MeshRenderer>().material.color = normalColor;
 			}
-			*/
+			
 			//pathHighlighter = transform.Find("PathHighlighter").gameObject;
 			
 		}
