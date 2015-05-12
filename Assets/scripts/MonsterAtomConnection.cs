@@ -19,11 +19,7 @@ public class MonsterAtomConnection : MonoBehaviour {
 		foreach(Atom3D atomNode in path){
 
 			atomNode.GetComponent<MeshRenderer>().material.color = atomNode.highlightColor;
-			if(atomNode.GetComponent<MeshRenderer>().material.color == atomNode.highlightColor){
-				Debug.Log(atomNode.gameObject.name + " color is highlight");
-			}else{
-				Debug.Log(atomNode.gameObject.name + " color is normal");
-			}
+			
 			
 		}
 	}
