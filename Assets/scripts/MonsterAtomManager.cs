@@ -72,9 +72,9 @@ public class MonsterAtomManager : MonoBehaviour {
 					}
 					if(pathBroken){
 						mac.ClearPath();
-						//mac.taskToggle.isOn = false;
+						mac.taskToggle.isOn = false;
 					}else{
-						//mac.taskToggle.isOn = true;
+						mac.taskToggle.isOn = true;
 						totalConnections += 1;
 					}
 					
@@ -87,7 +87,7 @@ public class MonsterAtomManager : MonoBehaviour {
 					}
 					//no path, clear last path,restore normal atom colors
 					mac.ClearPath();
-					//mac.taskToggle.isOn = false;
+					mac.taskToggle.isOn = false;
 					totalConnections -= 1;
 				}
 			}

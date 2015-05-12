@@ -44,14 +44,14 @@ public class UIControl3D : MonoBehaviour {
 		*/
 		//endGamePanel.SetActive(true);
 	}
-	/*
+	
 	public void OnHoverConnectionEntry(MonsterAtomConnection mac){
 		mac.ShowPath();
 	}
 	public void OnLeaveConnectionEntry(MonsterAtomConnection mac){
 		mac.HidePath();
 	}
-	*/
+	
 	public void UpdateTimer(float timeRemaining){
 		timerText.text = Mathf.Max(0.0f, timeRemaining).ToString("0.0");
 	}

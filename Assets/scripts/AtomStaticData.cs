@@ -17,7 +17,7 @@ public class AtomStaticData : MonoBehaviour {
 		AtomDataMap = new Dictionary<string, AtomUIData>();
 		if(Application.loadedLevelName == "AnchorDemo"){
 			atomNames = new string[]{"Cl","Cu","Na"}; 
-			startStocks = new int[]{6,5,7};
+			startStocks = new int[]{50,30,30};
 			if(atomNames.Length != startStocks.Length){
 				Debug.Log("atomNames and startStocks should have same lengths!");
 				Application.Quit();
