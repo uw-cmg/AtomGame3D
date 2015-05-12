@@ -13,25 +13,35 @@ public class MonsterAtomConnection : MonoBehaviour {
 		return path.Count > 0;
 	}
 	public void ShowPath(){
+		Debug.Log("showing path");
 		start.GetComponent<MeshRenderer>().material.color = start.highlightColor;
 		end.GetComponent<MeshRenderer>().material.color = end.highlightColor;
 		foreach(Atom3D atomNode in path){
+
 			atomNode.GetComponent<MeshRenderer>().material.color = atomNode.highlightColor;
+			if(atomNode.GetComponent<MeshRenderer>().material.color == atomNode.highlightColor){
+				Debug.Log(atomNode.gameObject.name + " color is highlight");
+			}else{
+				Debug.Log(atomNode.gameObject.name + " color is normal");
+			}
+			
 		}
 	}
 	public void HidePath(){
+		
 		start.GetComponent<MeshRenderer>().material.color = start.normalColor;
 		end.GetComponent<MeshRenderer>().material.color = end.normalColor;
 		foreach(Atom3D atomNode in path){
 			atomNode.GetComponent<MeshRenderer>().material.color = atomNode.normalColor;
 		}
+		
 	}
 	public void ClearPath(){
 		while(path.Count > 0){
 			Atom3D node = path[0];
 			if(node != null){
 				//node.pathHighlighter.SetActive(false);
-				node.GetComponent<MeshRenderer>().material.color = node.normalColor;
+				//node.GetComponent<MeshRenderer>().material.color = node.normalColor;
 			}
 			path.RemoveAt(0);
 		}

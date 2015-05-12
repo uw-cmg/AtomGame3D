@@ -65,7 +65,7 @@ public class MonsterAtomManager : MonoBehaviour {
 							pathBroken = true;
 						}else{
 							mac.path.Add(atomNode);
-							atomNode.GetComponent<MeshRenderer>().material.color = Color.white;
+							//atomNode.GetComponent<MeshRenderer>().material.color = Color.white;
 							//atomNode.pathHighlighter.SetActive(true);
 						}
 						
