@@ -86,7 +86,7 @@ public class UIControl3D : MonoBehaviour {
 		AtomPhysics3D.self.temperature = temperatureScroll.value * 2000f;
 	}
 	public void UpdateScore(){
-		//scoreText.text = GameControl3D.self.score.ToString("0.0");
+		scoreText.text = GameControl3D.self.score.ToString("0.0");
 	}
 	public void UpdateAtomBtnWithStock(Atom3D newlyAddedAtom){
 		if(Application.loadedLevelName == "AnchorDemo"){

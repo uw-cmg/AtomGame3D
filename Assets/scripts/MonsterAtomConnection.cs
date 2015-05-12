@@ -28,7 +28,15 @@ public class MonsterAtomConnection : MonoBehaviour {
 		start.GetComponent<MeshRenderer>().material.color = start.normalColor;
 		end.GetComponent<MeshRenderer>().material.color = end.normalColor;
 		foreach(Atom3D atomNode in path){
-			atomNode.GetComponent<MeshRenderer>().material.color = atomNode.normalColor;
+			if(atomNode.GetComponent<MonsterAtom3D>() != null){
+				if(atomNode.GetComponent<MonsterAtom3D>().enabled){
+					atomNode.GetComponent<MeshRenderer>().material.color 
+						= atomNode.GetComponent<MonsterAtom3D>().normalColor;
+				}
+			}else{
+				atomNode.GetComponent<MeshRenderer>().material.color = atomNode.normalColor;
+			}
+			
 		}
 		
 	}
