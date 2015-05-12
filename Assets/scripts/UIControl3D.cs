@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIControl3D : MonoBehaviour {
 	public static UIControl3D self;
-	//public GameObject endGamePanel;
+	public GameObject endGamePanel;
 	public GameObject tryAgainBtn;
 	public GameObject nextLevelBtn;
 	public GameObject atomMenuPanel;
@@ -19,7 +19,7 @@ public class UIControl3D : MonoBehaviour {
 	public Text timerText;
 	void Awake(){
 		self = this;
-		//endGamePanel.SetActive(false);
+		endGamePanel.SetActive(false);
 	}
 	// Use this for initialization
 	void Start () {
@@ -33,7 +33,7 @@ public class UIControl3D : MonoBehaviour {
 	//for connect monsters
 	public void OnGameEnded(){
 		//update game stats
-		/*
+		
 		scoreTextInStat.text = GameControl3D.self.score.ToString("0.0");
 		
 		numberOfConnections.text 
@@ -41,8 +41,8 @@ public class UIControl3D : MonoBehaviour {
 			+ MonsterAtomManager.self.atomConnections.Count; 
 			
 		numberOfUsedAtomsText.text = GameControl3D.self.totalAtomsUsed.ToString("0");
-		*/
-		//endGamePanel.SetActive(true);
+		
+		endGamePanel.SetActive(true);
 	}
 	
 	public void OnHoverConnectionEntry(MonsterAtomConnection mac){
@@ -114,7 +114,7 @@ public class UIControl3D : MonoBehaviour {
 			nextLevelBtn.SetActive(false);
 		}
 		
-		//endGamePanel.SetActive(true);
+		endGamePanel.SetActive(true);
 	}
 	public void OnClickQuit(){
 		Application.Quit();

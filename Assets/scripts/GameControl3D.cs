@@ -36,7 +36,7 @@ public class GameControl3D : MonoBehaviour {
 	
 	void Update(){
 		timeRemaining -= Time.deltaTime;
-		//UIControl3D.self.UpdateTimer(timeRemaining);
+		UIControl3D.self.UpdateTimer(timeRemaining);
 		if(timeRemaining <= 0){
 			gameState = (int)GameState.Ended;
 		}
@@ -86,7 +86,7 @@ public class GameControl3D : MonoBehaviour {
 	//score calculation, etc
 	void OnGameEnded(){
 		//check total number of atoms used
-		//MonsterAtomManager.self.EndAllCoroutines();
+		MonsterAtomManager.self.EndAllCoroutines();
 		score += 100.0f;
 		score -= 5.0f * totalAtomsUsed;
 		UIControl3D.self.UpdateScore();

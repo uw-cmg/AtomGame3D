@@ -84,11 +84,13 @@ public class MonsterAtomManager : MonoBehaviour {
 						//from having path to not having path
 						//minus score
 						GameControl3D.self.UpdateScoreBy(-100.0f);
+						Debug.Log("minus totalConnections");
+						totalConnections -= 1;
 					}
 					//no path, clear last path,restore normal atom colors
 					mac.ClearPath();
 					mac.taskToggle.isOn = false;
-					totalConnections -= 1;
+
 				}
 			}
 			if(totalConnections >= atomConnections.Count){
